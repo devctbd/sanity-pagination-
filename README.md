@@ -1,9 +1,9 @@
 <!-- TABLE OF CONTENTS -->
 
 <details>
-  <summary>Snity Query</summary>
+  <summary >Snity Query</summary>
   <pre>
-    <code>
+    
       export const getAllPostsQuery = (page: number, limit: number) =>
         defineQuery(
           `*[_type == "post" && defined(slug.current)]  |order(publishedAt desc)[${(page - 1) *
@@ -26,15 +26,13 @@
           }`
         );
 
-    </code>
-
   </pre>
 </details>
 
 <details>
-  <summary>Blog Page</summary>
+  <summary >Blog Page</summary>
   <pre>
-    <code>
+    
       import React, { PropsWithChildren } from "react";
       import { sanityFetch } from "@/sanity/lib/live";
       import { getAllPostsQuery } from "@/sanity/lib/queries";
@@ -87,7 +85,7 @@
           currentPage,
           totalPages,
           prev: currentPage > 1 ? currentPage - 1 : undefined,
-          next: currentPage < totalPages ? currentPage + 1 : undefined,
+          next: currentPage <pre totalPages ? currentPage + 1 : undefined,
           pages: Array.from({ length: totalPages }, (_, i) => i + 1),
         } as const;
 
@@ -135,15 +133,13 @@
         );
       }
 
-    </code>
-
   </pre>
 </details>
 
 <details>
-  <summary>Card Components</summary>
+  <summary >Card Components</summary>
   <pre>
-    <code>
+    
       import React from "react";
       import {
         Pagination,
@@ -249,8 +245,5 @@
 
       export default PaginitionSection;
 
-    </code>
-
   </pre>
 </details>
-
